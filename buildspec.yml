@@ -20,3 +20,6 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
       - docker push $REPO_URL:$IMAGE_TAG
+      - printf '[{"name":"simple-web-app","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+artifacts:
+    files: imagedefinitions.json
