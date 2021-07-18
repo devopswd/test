@@ -4,7 +4,7 @@ RUN mkdir APP
 
 WORKDIR APP
 
-ADD app.py
+ADD app.py .
 
 RUN pip3 install flask
 
