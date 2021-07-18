@@ -3,6 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      - ls
       - docker --version
       - echo Logging in Docker Hubs ...
       - docker login --username $DOCKER_USER --password $DOCKER_PASS
